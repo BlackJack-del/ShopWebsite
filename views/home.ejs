@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="/css/home.css">
+  <script src="/scripts/home.js" defer></script>  
+</head>
+
+<body>
+  <header>
+    <div class="topbar">
+      <img src="/images/Logo.png" alt="Shop Logo" id="logo">
+      <div class="search-container">
+        <select id="type-select">
+          <option value="all" selected>All</option>
+          <option value="clothing">Clothing</option>
+          <option value="electronics">Electronics</option>
+          <option value="home">Home</option>
+        </select>
+        <input type="text" id="search-bar" placeholder="Search...">
+        <button id="search-button">🔍</button>
+      </div>
+      <select id="language-select">
+        <option value="en">EN</option>
+        <option value="es">ES</option>
+        <option value="fr">FR</option>
+      </select>
+      <button id="account-button">Account</button>
+      <div id="cart">
+        <span id="cart-icon">🛒</span>
+        <span id="cart-count">0</span>
+      </div>
+    </div>
+    <div class="secondbar">
+      <button id="menu-button">☰ MENU</button>
+    </div>
+
+    <div id="overlay"></div>
+
+    <nav id="sidebar">
+    </nav>
+  </header>
+
+  <main></main>
+
+  <footer>
+    <p>&copy; 2024 Shop Website</p>
+  </footer>
+
+</body>
+
+</html>

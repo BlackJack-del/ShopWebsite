@@ -1,23 +1,129 @@
+/* General reset */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
+/* Topbar styling */
 .topbar {
-    background-color: #333; /* Lighter black color */
+    background-color: #333;
     height: 12vh;
     width: 100%;
     display: flex;
     align-items: center;
-    padding: 0 10px;
+    padding: 0 20px;
     box-sizing: border-box;
+    position: relative;
+    z-index: 101;
+    justify-content: space-between; /* Space between left and right sections */
 }
 
+/* Logo styling */
 #logo {
-    height: 40px;
+    height: 60px;
 }
 
+/* Search container styling */
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    flex-grow: 1;
+    max-width: 600px;
+    min-width: 300px;
+    margin: 0 auto; /* Center the search container within its flex container */
+}
+
+/* Type select styling */
+#type-select {
+    background-color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+}
+
+/* Search bar styling */
+#search-bar {
+    padding: 8px 15px;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    border-right: 1px solid #ddd;
+    outline: none;
+}
+
+/* Search button styling */
+#search-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #666;
+}
+
+/* Language select styling */
+#language-select {
+    background-color: #333; /* Match the top bar color */
+    color: #fff;
+    border: none;
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px; /* Space between search button and language select */
+}
+
+/* Account button styling */
+#account-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 15px; /* Space between language select and account button */
+}
+
+#account-button:hover {
+    background-color: #666;
+}
+
+/* Cart styling */
+#cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-left: 15px; /* Space between account button and cart */
+}
+
+#cart-icon {
+    font-size: 20px;
+}
+
+#cart-count {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 14px;
+    color: #000;
+}
+
+/* Second bar styling */
 .secondbar {
     background-color: gray;
     height: 5vh;
@@ -26,12 +132,13 @@ body, html {
     align-items: center;
     justify-content: flex-start;
     box-sizing: border-box;
+    position: relative;
 }
 
 #menu-button {
     background-color: gray;
     color: #fff;
-    border: 2px solid #444; /* Lighter black for border */
+    border: 2px solid #444;
     height: 80%;
     font-size: 15px;
     cursor: pointer;
@@ -44,50 +151,40 @@ body, html {
 }
 
 #menu-button:hover {
-    background-color: #555; /* Slightly darker gray on hover */
+    background-color: #555;
     color: #fff;
     transform: scale(1.05);
 }
 
+/* Sidebar styling */
 #sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hide off-screen */
+    left: -255px;
     width: 250px;
     height: 100%;
-    background-color: transparent; /* Transparent background for the sidebar */
-    color: #fff;
-    transition: left 0.3s, border-right 0.3s; /* Add transition for border-right */
+    background-color: #f0f0f0;
+    color: #000;
+    transition: left 0.3s;
     z-index: 100;
-    overflow: hidden; /* Hide overflowing content */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    border-right: 4px solid transparent; /* Initially hidden outline */
+    border-right: 4px solid #444;
 }
 
 #sidebar.show {
     left: 0;
-    border-right: 4px solid #444; /* Lighter black outline */
 }
 
-#sidebar .top-section {
-    background-color: #333; /* Lighter black color */
-    height: 12vh; /* Match the height of the top bar */
-    width: 100%;
-}
-
-#sidebar .bottom-section {
-    background-color: #f0f0f0; /* White with a very little bit of black */
-    flex: 1; /* Take up the remaining space */
-}
-
+/* Overlay styling */
 #overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Slightly darker to highlight the sidebar */
+    background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
