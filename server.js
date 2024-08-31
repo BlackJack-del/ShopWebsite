@@ -20,6 +20,10 @@ app.get('/signup', (req, res) => {
   res.render('signup'); // Render signup.ejs from views directory
 });
 
+app.get('/login', (req, res) => {
+  res.render('login'); // Render signup.ejs from views directory
+});
+
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
