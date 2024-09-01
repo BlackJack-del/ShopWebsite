@@ -12,18 +12,19 @@ app.use(express.static(path.join(__dirname, 'statics')));
 
 // Route for home page
 app.get('/', (req, res) => {
-  res.render('home');
+    res.render('home');
 });
 
 // Route for sign-up page
 app.get('/signup', (req, res) => {
-  res.render('signup'); // Render signup.ejs from views directory
+    res.render('signup'); // Renders signup.ejs
 });
 
+// Route for login page
 app.get('/login', (req, res) => {
-  res.render('login'); // Render signup.ejs from views directory
+    res.render('login'); // Renders login.ejs
 });
 
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+    console.log(`Server is running on http://localhost:${port}`);
 });

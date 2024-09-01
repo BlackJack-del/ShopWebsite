@@ -2,12 +2,104 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-    position: fixed;
+    background-color: #f4f4f4;
+    height: 100%;
+    overflow-x: hidden;
 }
 
-.logo {
-    width: 120px;
-    height: auto;
+.logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#login-logo {
+    height: 50px;
+    width: auto;
+}
+
+.login-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.login-header {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6a1b9a;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.icon-container {
+    flex-shrink: 0;
+    padding: 10px;
+    background: linear-gradient(45deg, #6a1b9a, #ab47bc);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.icon-container:hover {
+    background: linear-gradient(45deg, #ab47bc, #6a1b9a);
+}
+
+.input-icon {
+    width: 24px;
+    height: 24px;
+}
+
+input[type="text"], input[type="password"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px;
+    background-color: transparent;
+}
+
+#login-submit-button {
+    width: 100%;
+    background: linear-gradient(45deg, #6a1b9a, #ab47bc);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+#login-submit-button:hover {
+    background: linear-gradient(45deg, #ab47bc, #6a1b9a);
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    background-color: #ffffff;
+    border-top: 1px solid #ddd;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

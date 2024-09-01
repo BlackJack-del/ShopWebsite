@@ -7,40 +7,37 @@
     <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-    <img src="/Images/Logo.png" alt="Logo" class="logo">
-    <div id="login-box" class="modal">
-    <h2 class="modal-title">Login</h2>
-    
-    <div class="input-group">
-        <div class="icon-container">
-            <img src="/images/AccountIcon.png" alt="Account Icon">
+    <header>
+        <div class="logo-container">
+            <img src="/Images/Logo.png" alt="logo" id="login-logo">
         </div>
-        <input type="text" id="username" placeholder="Account">
-    </div>
+    </header>
 
-    <div class="input-group">
-        <div class="icon-container">
-            <img src="/images/PasswordIcon.png" alt="Password Icon">
+    <main>
+        <div class="login-container">
+            <h1 class="login-header">Login</h1>
+            <form action="/login" method="POST">
+                <div class="input-group">
+                    <span class="icon-container">
+                        <img src="/Images/AccountIcon.png" alt="Username Icon" class="input-icon">
+                    </span>
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+
+                <div class="input-group">
+                    <span class="icon-container">
+                        <img src="/Images/PasswordIcon.png" alt="Password Icon" class="input-icon">
+                    </span>
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+
+                <button type="submit" id="login-submit-button">Login</button>
+            </form>
         </div>
-        <input type="password" id="password" placeholder="Password">
-    </div>
-    
-    <div class="login-options">
-        <div class="remember-me">
-            <input type="checkbox" id="remember-me">
-            <label for="remember-me">Remember me</label>
-        </div>
-        <button id="google-login-button">
-            <img src="/images/GoogleLogo.png" alt="Google">
-        </button>
-    </div>
-    
-    <button id="login-button">Login</button>
-    
-    <div class="signup-box">
-        <p>Don't have an account? Click here!</p>
-        <button id="signup-button">Sign Up</button>
-    </div>
-    </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 PurpleRose. All rights reserved.</p>
+    </footer>
 </body>
 </html>
